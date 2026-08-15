@@ -1,0 +1,28 @@
+###   These files are not tracked by git 
+
+
+#Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# Node (in case we use any npm tooling for frontend, e.g. live-server)
+node_modules/
+
+# Editor/OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local DB dumps/exports (if anyone pulls data locally for testing)
+*.sql.bak
+database/postgres/local_dump.sql
