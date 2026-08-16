@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f3f3;
+    color: #222;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 245px;
+    min-height: 100vh;
+    background: #414141;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px 15px;
+    overflow-y: auto;
+}
+
+.sidebar-top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-bottom: 30px;
+    color: #ddd;
+    font-size: 23px;
+}
+
+.sidebar-top div {
+    cursor: pointer;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #666;
+}
+
+.side-title {
+    color: #aaa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 35px 15px 15px;
+}
+
+.side-notebook {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+}
+
+.side-notebook:hover {
+    background: #555;
+}
+
+.book-icon {
+    width: 34px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple {
+    background: #8978df;
+}
+
+.blue {
+    background: #657be0;
+}
+
+.pink {
+    background: #df70a8;
+}
+
+.green {
+    background: #72bd68;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    margin-left: 245px;
+    width: calc(100% - 245px);
+    min-height: 100vh;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    height: 100px;
+    background: #a3a3a3;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand {
+    background: #eeeeee;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.down {
+    margin-left: 12px;
+}
+
+.conversation {
+    width: 350px;
+    background: #eeeeee;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.conversation small {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.conversation div {
+    background: #d3d3d3;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.notebook-name {
+    margin-left: auto;
+    background: #eeeeee;
+    padding: 12px 24px;
+    border-radius: 20px;
+}
+
+.profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #222;
+    background: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* =========================
+   CHAT PAGE
+========================= */
+
+.chat-workspace {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    min-height: calc(100vh - 100px);
+    background: white;
+}
+
+.chat-panel,
+.summary-panel,
+.notes-panel {
+    border-right: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.panel-header h2 {
+    font-size: 21px;
+}
+
+.chat-content,
+.summary-content,
+.notes-content {
+    padding: 22px;
+    overflow-y: auto;
+}
+
+.user-message {
+    background: #999;
+    color: white;
+    padding: 13px 16px;
+    border-radius: 10px;
+    max-width: 75%;
+    margin: 0 0 20px auto;
+}
+
+.ai-message {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chat-actions button {
+    background: #d0d0d0;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.message-box {
+    display: flex;
+    gap: 8px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+}
+
+.message-box input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #bbb;
+    border-radius: 22px;
+    outline: none;
+}
+
+.send-btn {
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 50%;
+    background: #555;
+    color: white;
+    font-size: 20px;
+}
+
+.topic-pill {
+    display: inline-block;
+    background: #999;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.summary-item {
+    border-left: 4px solid #999;
+    padding: 10px 15px;
+    margin-bottom: 22px;
+}
+
+.summary-item p {
+    color: #666;
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+.note-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.notes-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.notes-content hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 25px 0;
+}
+
+.topic-box {
+    background: #eeeeee;
+    padding: 12px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+/* =========================
+   GENERAL PAGE
+========================= */
+
+.page {
+    padding: 55px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.page h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    border: none;
+    background: #666;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.primary-btn:hover {
+    background: #444;
+}
+
+/* =========================
+   NOTEBOOKS
+========================= */
+
+.notebook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.notebook-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.large-book {
+    width: 55px;
+    height: 65px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.notebook-card h3 {
+    margin-bottom: 8px;
+}
+
+.notebook-card p {
+    color: #777;
+}
+
+.notebook-card span {
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.dashboard-card h2 {
+    margin-bottom: 25px;
+}
+
+.topic-progress {
+    margin-bottom: 25px;
+}
+
+.topic-progress-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 13px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #777;
+}
+
+.weak-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.weak-area p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.weak {
+    background: #f0cccc;
+    color: #963636;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.good {
+    background: #d3ecd3;
+    color: #377337;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* =========================
+   PRACTICE
+========================= */
+
+.practice-top,
+.flashcard-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+select {
+    padding: 12px 18px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    background: white;
+    min-width: 220px;
+}
+
+.quiz-question {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.quiz-question h3 {
+    margin-bottom: 18px;
+}
+
+.quiz-question label {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 9px;
+    border-radius: 7px;
+}
+
+.quiz-question label:hover {
+    background: #f1f1f1;
+}
+
+/* =========================
+   FLASHCARDS
+========================= */
+
+.flashcard {
+    background: white;
+    max-width: 700px;
+    min-height: 350px;
+    margin: 30px auto;
+    padding: 55px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.flashcard small {
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.flashcard h2 {
+    font-size: 30px;
+    margin: 35px 0;
+}
+
+.flashcard hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.flashcard p {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #555;
+}
+
+.next-btn {
+    margin-top: 40px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #666;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE / PHONE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .chat-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-panel,
+    .summary-panel,
+    .notes-panel {
+        min-height: 500px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .notebook-grid,
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conversation {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 70px;
+        padding: 15px 8px;
+    }
+
+    .main {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .sidebar nav a {
+        font-size: 0;
+        text-align: center;
+        padding: 13px 5px;
+    }
+
+    .sidebar nav a::first-letter {
+        font-size: 20px;
+    }
+
+    .side-title,
+    .side-notebook span:not(.book-icon) {
+        display: none;
+    }
+
+    .topbar {
+        height: 75px;
+        padding: 10px;
+    }
+
+    .brand {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .notebook-name {
+        display: none;
+    }
+
+    .profile {
+        width: 40px;
+        height: 40px;
+    }
+
+    .page {
+        padding: 35px 20px;
+    }
+
+    .page h1 {
+        font-size: 28px;
+    }
+
+    .practice-top,
+    .flashcard-controls {
+        flex-direction: column;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .flashcard {
+        padding: 30px 20px;
+    }
+
+    .flashcard h2 {
+        font-size: 24px;
+    }
+}

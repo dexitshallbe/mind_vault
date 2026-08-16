@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Vault - Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div>⌕</div>
+            <div>▣</div>
+        </div>
+
+        <nav>
+            <a href="index.html">💬 New Chat</a>
+            <a href="#">📓 Notebooks</a>
+            <a href="dashboard.html" class="active">📊 Dashboard</a>
+            <a href="quiz.html">📝 Quiz</a>
+            <a href="flashcards.html">🎴 Flashcards</a>
+        </nav>
+
+        <div class="side-title">NOTEBOOKS</div>
+
+        <div class="side-notebook">
+            <span class="book-icon purple">▤</span>
+            <span>Python</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon blue">▤</span>
+            <span>Biology</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon pink">▤</span>
+            <span>Mathematics</span>
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="brand">
+                Mind Vault
+            </div>
+
+            <div class="notebook-name">
+                Dashboard
+            </div>
+
+            <div class="profile">
+                ●
+            </div>
+
+        </header>
+
+
+        <section class="page">
+
+            <h1>Dashboard</h1>
+
+            <p class="description">
+                Track topics covered and identify your weak areas
+                from quiz performance.
+            </p>
+
+
+            <div class="dashboard-grid">
+
+                <!-- TOPICS -->
+                <div class="dashboard-card">
+
+                    <h2>Topics Covered</h2>
+
+                    <div class="topic-progress">
+
+                        <div class="topic-progress-top">
+                            <span>Python</span>
+                            <strong>80%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                class="progress-fill"
+                                style="width:80%">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="topic-progress">
+
+                        <div class="topic-progress-top">
+                            <span>Biology</span>
+                            <strong>65%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                class="progress-fill"
+                                style="width:65%">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="topic-progress">
+
+                        <div class="topic-progress-top">
+                            <span>Mathematics</span>
+                            <strong>45%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <div
+                                class="progress-fill"
+                                style="width:45%">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WEAK AREAS -->
+                <div class="dashboard-card">
+
+                    <h2>Weak Areas</h2>
+
+                    <div class="weak-area">
+
+                        <div>
+                            <strong>Trigonometry</strong>
+                            <p>Quiz score: 52%</p>
+                        </div>
+
+                        <span class="weak">
+                            Weak
+                        </span>
+
+                    </div>
+
+
+                    <div class="weak-area">
+
+                        <div>
+                            <strong>Cell Division</strong>
+                            <p>Quiz score: 58%</p>
+                        </div>
+
+                        <span class="weak">
+                            Weak
+                        </span>
+
+                    </div>
+
+
+                    <div class="weak-area">
+
+                        <div>
+                            <strong>Python Functions</strong>
+                            <p>Quiz score: 82%</p>
+                        </div>
+
+                        <span class="good">
+                            Good
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
