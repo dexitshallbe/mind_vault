@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Vault - Flashcards</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div>⌕</div>
+            <div>▣</div>
+        </div>
+
+        <nav>
+            <a href="index.html">💬 New Chat</a>
+            <a href="#">📓 Notebooks</a>
+            <a href="dashboard.html">📊 Dashboard</a>
+            <a href="quiz.html">📝 Quiz</a>
+            <a href="flashcards.html" class="active">
+                🎴 Flashcards
+            </a>
+        </nav>
+
+        <div class="side-title">NOTEBOOKS</div>
+
+        <div class="side-notebook">
+            <span class="book-icon purple">▤</span>
+            <span>Python</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon blue">▤</span>
+            <span>Biology</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon pink">▤</span>
+            <span>Mathematics</span>
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="brand">
+                Mind Vault
+            </div>
+
+            <div class="notebook-name">
+                Flashcards
+            </div>
+
+            <div class="profile">
+                ●
+            </div>
+
+        </header>
+
+
+        <section class="page">
+
+            <h1>Flashcards</h1>
+
+            <p class="description">
+                Generate flashcards from your notebook content.
+            </p>
+
+
+            <div class="flashcard-controls">
+
+                <select>
+                    <option>Python Notebook</option>
+                    <option>Biology Notebook</option>
+                    <option>Mathematics Notebook</option>
+                </select>
+
+                <button class="primary-btn">
+                    Generate Flashcards
+                </button>
+
+            </div>
+
+
+            <div class="flashcard">
+
+                <small>
+                    QUESTION
+                </small>
+
+                <h2>
+                    What is a nested function?
+                </h2>
+
+                <hr>
+
+                <small>
+                    ANSWER
+                </small>
+
+                <p>
+                    A function defined inside another function.
+                </p>
+
+                <button class="next-btn">
+                    Next Card →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
