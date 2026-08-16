@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="search">⌕</div>
+            <div class="menu-icon">▣</div>
+        </div>
+
+        <nav>
+            <a href="#chat">New Chat</a>
+            <a href="#notebooks">Notebooks</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#practice">Practice</a>
+            <a href="#flashcards">Flashcards</a>
+        </nav>
+
+        <div class="side-title">NOTEBOOKS</div>
+
+        <div class="side-notebook active-notebook">
+            <span class="book-icon purple">▤</span>
+            <span>Python</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon blue">▤</span>
+            <span>Biology</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon pink">▤</span>
+            <span>Mathematics</span>
+        </div>
+
+        <div class="side-notebook">
+            <span class="book-icon green">▤</span>
+            <span>Physics</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN AREA ================= -->
+    <main class="main">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="brand">
+                <span>StudyAI</span>
+                <span class="down">⌄</span>
+            </div>
+
+            <div class="conversation">
+                <small>Conversation</small>
+                <div>Exploring Python Functions <span>⌄</span></div>
+            </div>
+
+            <div class="notebook-name">
+                Python Notebook
+            </div>
+
+            <div class="profile">
+                ●
+            </div>
+
+        </header>
+
+
+        <!-- ================================================= -->
+        <!-- CHAT WORKSPACE -->
+        <!-- ================================================= -->
+
+        <section class="workspace" id="chat">
+
+            <!-- CHAT -->
+            <div class="chat-panel">
+
+                <div class="panel-header">
+                    <h2>Conversation</h2>
+                </div>
+
+                <div class="chat-content">
+
+                    <div class="user-message">
+                        What is a nested function?
+                    </div>
+
+                    <div class="ai-message">
+                        A nested function is a function defined inside
+                        another function. It can access variables from
+                        the outer function.
+                    </div>
+
+                    <div class="user-message">
+                        Can you give me a simple Python example?
+                    </div>
+
+                    <div class="ai-message">
+                        Sure. A function can contain another function
+                        inside its body. The inner function can then
+                        be called from the outer function.
+                    </div>
+
+                    <div class="chat-actions">
+                        <button>Summarize this chat</button>
+                    </div>
+
+                </div>
+
+                <div class="message-box">
+                    <input
+                        type="text"
+                        placeholder="Ask anything about your studies..."
+                    >
+                    <button class="send-btn">↑</button>
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARIZED CONVERSATION -->
+            <div class="summary-panel">
+
+                <div class="panel-header">
+                    <h2>Summarized Conversation</h2>
+                </div>
+
+                <div class="summary-content">
+
+                    <div class="topic-pill">
+                        Python Functions
+                    </div>
+
+                    <h3>Key Topics</h3>
+
+                    <div class="summary-item">
+                        <strong>Nested Functions</strong>
+                        <p>
+                            A function defined inside another function.
+                        </p>
+                    </div>
+
+                    <div class="summary-item">
+                        <strong>Helper Functions</strong>
+                        <p>
+                            Small functions used to perform a specific task.
+                        </p>
+                    </div>
+
+                    <div class="summary-item">
+                        <strong>Function Scope</strong>
+                        <p>
+                            Inner functions can access variables from
+                            their surrounding function.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOTEBOOK CONTENT -->
+            <div class="notes-panel">
+
+                <div class="panel-header">
+                    <h2>Notebook</h2>
+                </div>
+
+                <div class="notes-content">
+
+                    <div class="note-heading">
+                        Python Functions
+                    </div>
+
+                    <p>
+                        This notebook automatically groups conversations
+                        related to Python.
+                    </p>
+
+                    <hr>
+
+                    <h3>Topics Covered</h3>
+
+                    <div class="topic-box">
+                        Functions
+                    </div>
+
+                    <div class="topic-box">
+                        Nested Functions
+                    </div>
+
+                    <div class="topic-box">
+                        Function Arguments
+                    </div>
+
+                    <div class="topic-box">
+                        Return Statements
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- NOTEBOOKS -->
+        <!-- ================================================= -->
+
+        <section class="page-section" id="notebooks">
+
+            <h1>Notebooks</h1>
+
+            <p class="page-description">
+                Related conversations are automatically grouped
+                into notebooks based on topic.
+            </p>
+
+            <button class="primary-btn">
+                + Create Notebook
+            </button>
+
+            <div class="notebook-grid">
+
+                <div class="notebook-card">
+                    <div class="large-book purple">▤</div>
+                    <h3>Python</h3>
+                    <p>12 conversations</p>
+                    <span>Programming</span>
+                </div>
+
+                <div class="notebook-card">
+                    <div class="large-book blue">▤</div>
+                    <h3>Biology</h3>
+                    <p>8 conversations</p>
+                    <span>Science</span>
+                </div>
+
+                <div class="notebook-card">
+                    <div class="large-book pink">▤</div>
+                    <h3>Mathematics</h3>
+                    <p>15 conversations</p>
+                    <span>Mathematics</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- DASHBOARD -->
+        <!-- ================================================= -->
+
+        <section class="page-section" id="dashboard">
+
+            <h1>Dashboard</h1>
+
+            <p class="page-description">
+                See the topics you have covered and identify weak areas.
+            </p>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card topics-card">
+
+                    <h2>Topics Covered</h2>
+
+                    <div class="topic-progress">
+                        <div>
+                            <span>Python</span>
+                            <strong>80%</strong>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="topic-progress">
+                        <div>
+                            <span>Biology</span>
+                            <strong>65%</strong>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:65%"></div>
+                        </div>
+                    </div>
+
+                    <div class="topic-progress">
+                        <div>
+                            <span>Mathematics</span>
+                            <strong>45%</strong>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-fill" style="width:45%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h2>Weak Areas</h2>
+
+                    <div class="weak-area">
+                        <div>
+                            <strong>Trigonometry</strong>
+                            <p>Quiz score: 52%</p>
+                        </div>
+                        <span class="weak">Weak</span>
+                    </div>
+
+                    <div class="weak-area">
+                        <div>
+                            <strong>Cell Division</strong>
+                            <p>Quiz score: 58%</p>
+                        </div>
+                        <span class="weak">Weak</span>
+                    </div>
+
+                    <div class="weak-area">
+                        <div>
+                            <strong>Python Functions</strong>
+                            <p>Quiz score: 82%</p>
+                        </div>
+                        <span class="good">Good</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- PRACTICE -->
+        <!-- ================================================= -->
+
+        <section class="page-section" id="practice">
+
+            <h1>Practice</h1>
+
+            <p class="page-description">
+                Generate 5 MCQ questions from your notebook content.
+            </p>
+
+            <div class="practice-top">
+
+                <select>
+                    <option>Python Notebook</option>
+                    <option>Biology Notebook</option>
+                    <option>Mathematics Notebook</option>
+                </select>
+
+                <button class="primary-btn">
+                    Generate 5 MCQs
+                </button>
+
+            </div>
+
+
+            <div class="quiz-question">
+
+                <h3>1. What is a nested function?</h3>
+
+                <label>
+                    <input type="radio" name="q1">
+                    A function defined inside another function
+                </label>
+
+                <label>
+                    <input type="radio" name="q1">
+                    A function with no return statement
+                </label>
+
+                <label>
+                    <input type="radio" name="q1">
+                    A function imported from another file
+                </label>
+
+                <label>
+                    <input type="radio" name="q1">
+                    A function with multiple arguments
+                </label>
+
+            </div>
+
+
+            <div class="quiz-question">
+
+                <h3>2. Which keyword is used to define a function?</h3>
+
+                <label>
+                    <input type="radio" name="q2">
+                    function
+                </label>
+
+                <label>
+                    <input type="radio" name="q2">
+                    define
+                </label>
+
+                <label>
+                    <input type="radio" name="q2">
+                    def
+                </label>
+
+                <label>
+                    <input type="radio" name="q2">
+                    func
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- FLASHCARDS -->
+        <!-- ================================================= -->
+
+        <section class="page-section" id="flashcards">
+
+            <h1>Flashcards</h1>
+
+            <p class="page-description">
+                Generate flashcards from your notebook content.
+            </p>
+
+            <div class="flashcard-controls">
+
+                <select>
+                    <option>Python Notebook</option>
+                    <option>Biology Notebook</option>
+                    <option>Mathematics Notebook</option>
+                </select>
+
+                <button class="primary-btn">
+                    Generate Flashcards
+                </button>
+
+            </div>
+
+
+            <div class="flashcard">
+
+                <small>QUESTION</small>
+
+                <h2>
+                    What is a nested function?
+                </h2>
+
+                <hr>
+
+                <small>ANSWER</small>
+
+                <p>
+                    A function defined inside another function.
+                </p>
+
+                <button class="next-btn">
+                    Next Card →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- RESOURCE ONLY MODE -->
+        <!-- ================================================= -->
+
+        <section class="page-section resource-mode">
+
+            <h1>Resource-only Mode</h1>
+
+            <p class="page-description">
+                Answers are restricted to information available
+                in your notebook resources.
+            </p>
+
+            <div class="resource-toggle-card">
+
+                <div>
+                    <h3>Resource-only mode</h3>
+                    <p>
+                        Use only notebook content when answering questions.
+                    </p>
+                </div>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
