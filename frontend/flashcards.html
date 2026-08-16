@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mind Vault - Flashcards</title>
-    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/flashcards.css">
 </head>
 
 <body>
@@ -13,106 +15,67 @@
 
     <aside class="sidebar">
 
-        <div class="sidebar-top">
-            <div>⌕</div>
-            <div>▣</div>
+        <div class="logo">
+            <div class="logo-icon">M</div>
+            <span>Mind Vault</span>
         </div>
 
-        <nav>
-            <a href="index.html">💬 New Chat</a>
-            <a href="#">📓 Notebooks</a>
-            <a href="dashboard.html">📊 Dashboard</a>
-            <a href="quiz.html">📝 Quiz</a>
-            <a href="flashcards.html" class="active">
-                🎴 Flashcards
-            </a>
-        </nav>
-
-        <div class="side-title">NOTEBOOKS</div>
-
-        <div class="side-notebook">
-            <span class="book-icon purple">▤</span>
-            <span>Python</span>
-        </div>
-
-        <div class="side-notebook">
-            <span class="book-icon blue">▤</span>
-            <span>Biology</span>
-        </div>
-
-        <div class="side-notebook">
-            <span class="book-icon pink">▤</span>
-            <span>Mathematics</span>
-        </div>
+        <a href="index.html" class="nav-item">💬 Chat</a>
+        <a href="#" class="nav-item">📚 Notebooks</a>
+        <a href="dashboard.html" class="nav-item">📊 Dashboard</a>
+        <a href="quiz.html" class="nav-item">✏️ Quiz</a>
+        <a href="flashcards.html" class="nav-item active">🗂️ Flashcards</a>
 
     </aside>
 
 
-    <main class="main">
+    <main class="main-content">
 
-        <header class="topbar">
+        <header class="page-header">
 
-            <div class="brand">
-                Mind Vault
-            </div>
+            <button id="menuBtn" class="mobile-menu">
+                ☰
+            </button>
 
-            <div class="notebook-name">
-                Flashcards
-            </div>
-
-            <div class="profile">
-                ●
+            <div>
+                <h1>Flashcards</h1>
+                <p>Review important concepts quickly.</p>
             </div>
 
         </header>
 
 
-        <section class="page">
+        <section class="flashcard-section">
 
-            <h1>Flashcards</h1>
+            <div class="flashcard" id="flashcard">
 
-            <p class="description">
-                Generate flashcards from your notebook content.
-            </p>
+                <span class="card-label">
+                    Question
+                </span>
 
+                <h2 id="cardQuestion">
+                    What is Retrieval-Augmented Generation?
+                </h2>
 
-            <div class="flashcard-controls">
-
-                <select>
-                    <option>Python Notebook</option>
-                    <option>Biology Notebook</option>
-                    <option>Mathematics Notebook</option>
-                </select>
-
-                <button class="primary-btn">
-                    Generate Flashcards
-                </button>
+                <p id="cardAnswer">
+                    Click "Show Answer" to reveal the answer.
+                </p>
 
             </div>
 
 
-            <div class="flashcard">
+            <div class="controls">
 
-                <small>
-                    QUESTION
-                </small>
+                <button id="prevBtn">
+                    ← Previous
+                </button>
 
-                <h2>
-                    What is a nested function?
-                </h2>
+                <button id="showBtn">
+                    Show Answer
+                </button>
 
-                <hr>
-
-                <small>
-                    ANSWER
-                </small>
-
-                <p>
-                    A function defined inside another function.
-                </p>
-
-                <button class="next-btn">
-                    Next Card →
+                <button id="nextBtn">
+                    Next →
                 </button>
 
             </div>
@@ -122,6 +85,8 @@
     </main>
 
 </div>
+
+<script src="js/flashcards.js"></script>
 
 </body>
 </html>
