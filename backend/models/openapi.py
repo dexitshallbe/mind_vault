@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-api_url = "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"
+api_url = ""
 base_url = "https://openrouter.ai/api/v1"
 model = "nvidia/nemotron-3-ultra-550b-a55b:free"
 
